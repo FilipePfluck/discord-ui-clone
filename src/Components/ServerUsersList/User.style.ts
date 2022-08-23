@@ -2,7 +2,7 @@ import {styled} from '../../../stitches.config';
 
 export const Container = styled('button', {
 	padding: '4px 8px',
-	marginTop: 4,
+	marginTop: 2,
 	borderRadius: 4,
 	width: '100%',
 	display: 'flex',
