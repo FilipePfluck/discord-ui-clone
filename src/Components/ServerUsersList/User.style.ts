@@ -7,7 +7,7 @@ export const Container = styled('button', {
 	width: '100%',
 	display: 'flex',
 	alignItems: 'center',
-	background: 'transparent',
+	background: 'inherit',
 	transition: '0.2s',
 	'&:hover': {
 		background: '$grayLight',

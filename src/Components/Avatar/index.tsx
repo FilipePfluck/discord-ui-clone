@@ -17,7 +17,12 @@ export const Avatar = ({src, alt, status = 'invisible', size = 32, showStatus = 
 			<S.Fallback style={{height: size, width: size}}>
 				<FaDiscord size={size/1.6} color='#FFF'/>
 			</S.Fallback>
-			{showStatus && <StatusBadge isBig={size > 48} status={status}/>}
+			{showStatus && 
+				<StatusBadge 
+					isBig={size > 48} 
+					status={status} 
+				/>
+			}
 		</S.Container>
 	);
 }

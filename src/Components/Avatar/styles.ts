@@ -4,7 +4,7 @@ import {styled} from '../../../stitches.config';
 export const Container = styled(Avatar.Root, {
 	borderRadius: '50%',
 	position: 'relative',
-	backgorund: '#CCC',
+	background: 'inherit',
 	marginTop: 'auto',
 	marginBottom: 'auto',
 });

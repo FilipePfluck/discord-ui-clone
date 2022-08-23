@@ -14,9 +14,6 @@ export const Container = styled('button', {
 		isSelected: {
 			true: {
 				background: '$grayLighter',
-				'>*:nth-child(2)': {
-					display: 'flex',
-				},
 				p: {
 					filter: 'brightness(1.4)',
 				},
@@ -25,9 +22,6 @@ export const Container = styled('button', {
 				background: 'transparent',
 				'&:hover': {
 					background: '$grayLight',
-					'>*:nth-child(2)': {
-						display: 'flex',
-					},
 					p: {
 						filter: 'brightness(1.4)',
 					},
@@ -39,10 +33,11 @@ export const Container = styled('button', {
 
 export const LeftContent = styled('div', {
 	display: 'flex',
+	maxWidth: '100%',
 	alignItems: 'center',
-	maxWidth: 140,
 
 	p: {
+		display: 'block',
 		marginLeft: 8,
 		whiteSpace: 'nowrap',
 		overflow: 'hidden',
@@ -57,7 +52,7 @@ export const LeftContent = styled('div', {
 });
 
 export const RightContent = styled('div', {
-	display: 'none',
+	display: 'flex',
 	alignItems: 'center',
 	svg: {
 		marginLeft: 8,

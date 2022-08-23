@@ -11,21 +11,34 @@ export interface ChannelProps {
 	onClick: (a: any) => any;
 }
 
-export const Channel = ({type, name, isSelected, onClick}: ChannelProps) => (
-	<S.Container
-		isSelected={isSelected}
-		onClick={type === 'text' ? onClick : () => {}}
-	>
-		<S.LeftContent>
-			{type === 'text'
-				? <MdTag size={20}/>
-				: <MdVolumeUp size={20}/>
-			}
-			<p>{name}</p>
-		</S.LeftContent>
-		<S.RightContent>
-			<TooltipIcon icon={MdPersonAdd} label='Criar convite' tooltipText='Criar convite' />
-			<MdSettings/>
-		</S.RightContent>
-	</S.Container>
-);
+export const Channel = ({type, name, isSelected, onClick}: ChannelProps) => {
+	const [isRightContentVisible, setIsRightContentVisible] = useState(false)
+
+	const makeRightContentVisible = ()=>{setIsRightContentVisible(true)}
+	const makeRightContentInvisible = ()=>{setIsRightContentVisible(false)}
+
+	return (
+		<S.Container
+			isSelected={isSelected}
+			onClick={type === 'text' ? onClick : () => {}}
+			onMouseEnter={makeRightContentVisible}
+			onMouseLeave={makeRightContentInvisible}
+			onFocus={makeRightContentVisible}
+			onBlur={makeRightContentInvisible}
+		>
+			<S.LeftContent>
+				{type === 'text'
+					? <MdTag size={20}/>
+					: <MdVolumeUp size={20}/>
+				}
+				<p>{name}</p>
+			</S.LeftContent>
+			{(isSelected || isRightContentVisible) && (
+				<S.RightContent>
+					<TooltipIcon icon={MdPersonAdd} label='Criar convite' tooltipText='Criar convite' />
+					<MdSettings/>
+				</S.RightContent>
+			)}
+		</S.Container>
+	)
+}

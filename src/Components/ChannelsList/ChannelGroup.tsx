@@ -3,6 +3,7 @@ import {useState} from 'react';
 import * as S from './ChannelGroup.styles';
 
 import {Channel, ChannelProps} from './Channel';
+import { TooltipIcon } from '../TooltipIcon';
 
 export interface ChannelGroupProps {
 	value: string;
@@ -12,8 +13,8 @@ export interface ChannelGroupProps {
 		name: string;
 		id: number;
 	}>;
-	selectedChannel: number | undefined;
-	setSelectedChannel: React.Dispatch<React.SetStateAction<number | undefined>>;
+	selectedChannel: number | null;
+	setSelectedChannel: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
 export const ChannelGroup = ({value, name, channels, selectedChannel, setSelectedChannel}: ChannelGroupProps) => (
@@ -26,7 +27,7 @@ export const ChannelGroup = ({value, name, channels, selectedChannel, setSelecte
 				</div>
 
 				<S.AddButton>
-					<MdAdd size={20}/>
+					<TooltipIcon icon={MdAdd} tooltipText="Criar canal" size={20}/>
 				</S.AddButton>
 			</S.Trigger>
 		</S.Header>

@@ -7,8 +7,8 @@ export interface TooltipProps extends RadixTooltipProps {
 	text: string;
 }
 
-export const Tooltip = ({children, text, ...props}: TooltipProps) => (
-	<S.Container {...props}>
+export const Tooltip = ({children, text, disableHoverableContent = true, ...props}: TooltipProps) => (
+	<S.Container disableHoverableContent={disableHoverableContent} {...props}>
 		<S.Trigger>
 			{children}
 		</S.Trigger>

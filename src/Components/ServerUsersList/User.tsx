@@ -16,7 +16,7 @@ export const User = ({src, status = 'invisible', nick, tag, description}: UserPr
 	return (
 		<UserPopover tag={tag} nick={nick} status={status} avatarUrl={src} description={description}>
 			<S.Container>
-				<Avatar src={src} status={status} alt={nick || tagName}/>
+				<Avatar src={src} status={status} alt={nick || tagName} badgeBorderColor="#2F3136"/>
 				<p>{nick || tagName}</p>
 			</S.Container>
 		</UserPopover>

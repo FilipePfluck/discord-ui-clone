@@ -2,6 +2,7 @@ import * as Popover from '@radix-ui/react-popover';
 import { styled } from "../../../stitches.config";
 import { keyframes } from '@stitches/react';
 import { Avatar } from '../Avatar';
+import { StatusBadge } from '../StatusBadge';
 
 const slideRightAndFade = keyframes({
   '0%': { transform: 'translateX(-8px)' },
@@ -9,15 +10,15 @@ const slideRightAndFade = keyframes({
 });
 
 export const Container = styled(Popover.Root, {
-
+  background: 'inherit'
 })
 
 export const Trigger = styled(Popover.Trigger, {
-
+  width: '100%',
+  background: 'inherit'
 })
 
 export const Portal = styled(Popover.Portal, {
-
 })
 
 export const PopupContent = styled(Popover.Content, {
@@ -37,7 +38,8 @@ export const PopupContent = styled(Popover.Content, {
       willChange: 'transform',
       animationName: slideRightAndFade
     }
-  }
+  },
+
 })
 
 export const Header = styled('header', {
@@ -48,20 +50,22 @@ export const Header = styled('header', {
 })
 
 export const PopoverAvatar = styled(Avatar, {
+  background: 'inherit',
   width: 92,
   height: 92,
   border: '6px solid $black',
   position: 'absolute',
   top: 20,
-  left: 16
+  left: 16,
 })
 
 export const Content = styled('div', {
   display: 'flex',
   flexDirection: 'column',
+  background: 'inherit',
 
   padding: 16,
-  paddingTop: 64,
+  paddingTop: 64
 })
 
 export const OnlyTagContainer = styled('div', {

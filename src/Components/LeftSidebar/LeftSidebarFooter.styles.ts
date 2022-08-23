@@ -16,6 +16,7 @@ export const Container = styled('footer', {
 export const NameAndImageContainer = styled('div', {
 	display: 'flex',
 	alignItems: 'center',
+	background: 'inherit'
 });
 
 export const NameAndTag = styled('div', {

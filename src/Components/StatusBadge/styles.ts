@@ -1,16 +1,26 @@
 import {styled} from '../../../stitches.config';
 
+export const Container = styled('div', {
+	position: 'absolute',
+	right: -3,
+	bottom: 1,
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+
+	height: 16,
+	width: 16,
+	borderRadius: '50%',
+	background: 'inherit'
+})
+
 export const StatusBadge = styled('div', {
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
-	position: 'absolute',
-	right: -3,
-	bottom: 1,
-	height: 16,
-	width: 16,
+	height: 10,
+	width: 10,
 	borderRadius: '50%',
-	border: '3px solid $grayDarker',
 
 	variants: {
 		status: {

@@ -3,7 +3,7 @@ import {ChannelGroup} from './ChannelGroup';
 import * as S from './styles';
 
 export const ChannelsList = () => {
-	const [selectedChannel, setSelectedChannel] = useState<number | undefined>(null);
+	const [selectedChannel, setSelectedChannel] = useState<number | null>(null);
 
 	return (
 		<S.Container type='multiple'>

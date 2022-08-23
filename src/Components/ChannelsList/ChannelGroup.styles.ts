@@ -36,6 +36,12 @@ export const Trigger = styled(Accordion.Trigger, {
 export const AddButton = styled('div', {
 	color: '$unimportant',
 	marginRight: 8,
+	'svg': {
+		color: '$unimportant',
+		'&:hover': {
+			color: '$text',
+		},
+	}
 });
 
 export const Content = styled(Accordion.Content, {

@@ -15,6 +15,7 @@ export const Scroll = styled('div', {
 	display: 'flex',
 	flexDirection: 'column',
 	padding: '8px',
+	background: 'inherit',
 
 	width: '100%',
 	height: '100%',

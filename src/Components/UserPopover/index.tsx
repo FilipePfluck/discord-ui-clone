@@ -21,7 +21,7 @@ export const UserPopover = ({ children, avatarUrl, description, nick, tag, statu
       </S.Trigger>
       <S.Portal>
         <S.PopupContent side="left" sideOffset={16} align='start'>
-        <S.Header/>
+          <S.Header/>
           <S.PopoverAvatar src={avatarUrl} size={80} alt={nick || tagName} status={status}/>
           <S.Content>
             {nick ? (
